@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>994</width>
+    <width>1004</width>
     <height>745</height>
    </rect>
   </property>
@@ -60,16 +60,6 @@
    </property>
    <property name="text">
     <string>Baud rate:</string>
-   </property>
-  </widget>
-  <widget class="QTextEdit" name="textEdit_3">
-   <property name="geometry">
-    <rect>
-     <x>90</x>
-     <y>710</y>
-     <width>901</width>
-     <height>30</height>
-    </rect>
    </property>
   </widget>
   <widget class="QLabel" name="label_3">
@@ -129,6 +119,16 @@
      <string>19200</string>
     </property>
    </item>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>710</y>
+     <width>900</width>
+     <height>30</height>
+    </rect>
+   </property>
   </widget>
  </widget>
  <resources/>

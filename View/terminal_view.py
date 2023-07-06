@@ -13,7 +13,7 @@ class TerminalView(QMainWindow):
         self.ui.setupUi(self.window)
         self.window.show()
 
-        self.input = self.ui.textEdit_3
+        self.input = self.ui.lineEdit
         connect_button = self.ui.pushButton
         connect_button.clicked.connect(self.connect_button_clicked)
         self.input.returnPressed.connect(self.send_command)
