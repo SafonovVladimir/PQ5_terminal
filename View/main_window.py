@@ -60,14 +60,3 @@ class Ui_MainWindow(object):
         self.comboBox_2.setItemText(0, _translate("MainWindow", "115200"))
         self.comboBox_2.setItemText(1, _translate("MainWindow", "57600"))
         self.comboBox_2.setItemText(2, _translate("MainWindow", "19200"))
-
-
-if __name__ == "__main__":
-    import sys
-
-    app = QtWidgets.QApplication(sys.argv)
-    MainWindow = QtWidgets.QWidget()
-    ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
-    MainWindow.show()
-    sys.exit(app.exec_())
