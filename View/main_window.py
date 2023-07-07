@@ -50,7 +50,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "Minicom"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Form"))
         self.pushButton.setText(_translate("MainWindow", "Connect"))
         self.label.setText(_translate("MainWindow", "Port:"))
         self.label_2.setText(_translate("MainWindow", "Baud rate:"))

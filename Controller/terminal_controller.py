@@ -17,12 +17,12 @@ class TerminalController:
         baud_rate = int(self.window.ui.comboBox_2.currentText())
 
         try:
-            self.window.ui.textBrowser.append(f"Connected to {port} at {baud_rate} baud rate.")
+            self.update_logs(f"Connected to {port} at {baud_rate} baud rate.")
             self.serial_port_reader = SerialPortReader(port, baud_rate)
             self.serial_port_reader.new_data_received.connect(self.update_logs)
             self.serial_port_reader.start()
         except serial.SerialException as e:
-            self.window.ui.textBrowser.append(f"Error: {str(e)}")
+            self.update_logs(f"Error: {str(e)}")
 
     def update_logs(self, data):
         self.window.ui.textBrowser.append(data)
@@ -30,5 +30,5 @@ class TerminalController:
     def send_command(self):
         command = self.input.text()
         self.serial_port_reader.serial_port.write(command.encode() + b"\r\n")
-        self.window.ui.textBrowser.append(f"> {command}")
+        self.update_logs(f"> {command}")
         self.input.clear()
