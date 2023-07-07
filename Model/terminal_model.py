@@ -14,6 +14,3 @@ class TerminalModel:
         except serial.SerialException as e:
             return str(e)
 
-    def send_command(self, command):
-        if self.serial_port_reader:
-            self.serial_port_reader.serial_port.write(command.encode() + b"\r\n")
